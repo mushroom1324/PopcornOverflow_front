@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+// src/main/frontend/src/App.js
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, {useEffect, useState, Component} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+} from "react-router-dom";
+
+import MyNav from "./components/MyNav";
+import Main from "./components/Main";
+import Post from "./components/Post";
+import Chat from "./components/Chat";
+import ViewMessage from "./components/ViewMessage";
+import Login from "./components/Login";
+import NewPost from "./components/NewPost"
+
+const App = () => {
+
+    return (
+        <div style={{
+            backgroundImage: `url("/background.jpeg")`,
+            backgroundSize: "1500px",
+            backgroundRepeat: "no-repeat",
+            fontFamily: `serif`,
+
+        }}>
+            <BrowserRouter>
+                <MyNav />
+                <Routes>
+                    <Route path={"/Main"} element={<Main />} />
+                    <Route path={"/"} element={<Main />} />
+                    <Route path={"/Chat"} element={<Chat />} />
+                    <Route path={"/Post"} element={<Post />} />
+                    <Route path={"/NewPost"} element={<NewPost />} />
+                    <Route path={"/ViewMessage"} element={<ViewMessage />} />
+                    <Route path={"/Login"} element={<Login />} />
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;

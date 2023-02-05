@@ -1,0 +1,25 @@
+.mybutton {
+    color: black;
+    margin-left: 50px;
+    margin-top: 30px;
+    border-radius: 100px;
+    background-color: snow;
+    border-color: snow;
+}
+
+.mybutton:hover {
+    animation: changecolor-btn 0.5s forwards
+}
+
+@keyframes changecolor-btn {
+    from {
+        background-color: snow;
+        border-color: snow;
+        color: black;
+    }
+    to {
+        background-color: grey;
+        border-color: grey;
+
+    }
+}

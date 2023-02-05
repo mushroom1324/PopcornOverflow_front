@@ -1,0 +1,58 @@
+.TopNav {
+    background:
+        /* top, transparent black, faked with gradient */
+            linear-gradient(
+                    rgba(0, 0, 0, 0.1),
+                    rgba(0, 0, 0, 0.1)
+            );
+
+    height: 30px;
+    width: 100%;
+    backdrop-filter: blur(5px);
+
+}
+
+.letter {
+    color: snow;
+    font-size: 15px;
+    margin: 0 0 0 0;
+}
+
+.font-hover {
+    color: snow;
+
+}
+.font-hover:hover {
+    animation: changecolor 0.5s forwards;
+}
+
+@keyframes changecolor {
+    from {
+        color: snow;
+    }
+    to {
+        color: grey;
+    }
+    
+}
+
+.mySearchButton {
+    color: snow;
+    border-color: snow;
+}
+
+.mySearchButton:hover {
+    animation: changeColor-searchButton 0.5s forwards
+}
+
+@keyframes changeColor-searchButton {
+    from {
+        background-color: snow;
+        border-color: snow;
+    }
+    to {
+        background-color: grey;
+        border-color: grey;
+
+    }
+}
